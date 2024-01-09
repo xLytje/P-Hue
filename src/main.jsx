@@ -9,15 +9,11 @@ import {
 import App from "./App";
 import IndexView from "./pages/index";
 import ErrorView from "./pages/error";
-import DetailsView from "./pages/details";
-import ListView from "./pages/list";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />} errorElement={<ErrorView />}>
       <Route index element={<IndexView />} />
-      <Route path="/list" element={<ListView />} />
-      <Route path="/details/:id" element={<DetailsView />} />
     </Route>
   )
 );

@@ -1,18 +1,74 @@
 import { Link } from "react-router-dom";
+import { styled } from "styled-components";
+import Room from "../components/Room";
+
+const User = styled.figure`
+  height: 50px;
+  width: 50px;
+  border-radius: 500px;
+  border: 1px solid #fff;
+  margin: 0;
+`;
+const Head = styled.div`
+  padding: 2rem;
+  margin: 30px 0 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+const Menu = styled.section`
+  background: #f6f8fb;
+  padding: 2rem;
+  border-radius: 30px 30px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: space-between;
+  height: auto;
+`;
 
 const IndexView = () => {
   return (
     <>
-      <img className="frontcat" src="./src/assets/cat.png" alt="" />
-      <h1 className="fronttitle">Our Pet Society</h1>
-      <h2 className="frontbread">
-        We take care of your pets while you are away. We have a lot of pets to
-        choose from.
-      </h2>
-      <img className="frontdot" src="./src/assets/dots.png" alt="" />
-      <Link to={"/list"}>
-        <button className="frontbutton">See Pets</button>
-      </Link>
+      <Head>
+        <h1>
+          Control <br></br> Panel
+        </h1>
+        <User />
+      </Head>
+      <Menu>
+        <h3>All Rooms</h3>
+        <Room
+          image={"../src/assets/bed.png"}
+          title={"Bed"}
+          bread={"4 Lights"}
+        />
+        <Room
+          image={"../src/assets/room.png"}
+          title={"Bed"}
+          bread={"4 Lights"}
+        />
+        <Room
+          image={"../src/assets/kitchen.png"}
+          title={"Bed"}
+          bread={"4 Lights"}
+        />
+        <Room
+          image={"../src/assets/bathtube.png"}
+          title={"Bed"}
+          bread={"4 Lights"}
+        />
+        <Room
+          image={"../src/assets/house.png"}
+          title={"Bed"}
+          bread={"4 Lights"}
+        />
+        <Room
+          image={"../src/assets/balcony.png"}
+          title={"Bed"}
+          bread={"4 Lights"}
+        />
+      </Menu>
     </>
   );
 };

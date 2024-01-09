@@ -1,31 +1,23 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import {
-  createBrowserRouter,
   createRoutesFromElements,
   Route,
   RouterProvider,
+  createBrowserRouter,
 } from "react-router-dom";
 import App from "./App";
-import DetailsView, { DetailsViewData } from "./pages/DetailsView";
-import ErrorView from "./pages/ErrorView";
-import FavoriteView from "./pages/FavoriteView";
-import ListView, { ListViewData } from "./pages/ListView";
+import IndexView from "./pages/index";
+import ErrorView from "./pages/error";
+import DetailsView from "./pages/details";
+import ListView from "./pages/list";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />} errorElement={<ErrorView />}>
-      <Route index loader={ListViewData} element={<ListView />} />
-      <Route
-        path="/details/:id"
-        loader={DetailsViewData}
-        element={<DetailsView />}
-      />
-      <Route
-        path="/favorite"
-        loader={ListViewData}
-        element={<FavoriteView />}
-      />
+      <Route index element={<IndexView />} />
+      <Route path="/list" element={<ListView />} />
+      <Route path="/details/:id" element={<DetailsView />} />
     </Route>
   )
 );

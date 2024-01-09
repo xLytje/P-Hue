@@ -1,104 +1,103 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Mulish:wght@100;300;500;700&display=swap");
-@import "normalize.css";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-#root {
-  max-width: 768px;
-  font-family: "Mulish", sans-serif;
-  letter-spacing: 0.75px;
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+body {
+  background-color: var(--background);
+  max-width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
 }
-a {
-  color: #000;
-  text-decoration: none;
-}
-body,
-figure,
-figcaption,
-p,
 h1,
 h2,
-h3,
-h4 {
-  margin: 0;
-  padding: 0;
-}
-body {
-  background-color: var(--white);
-}
-h1,
-h2 {
-  font-family: "Merriweather", serif;
-  color: #110e47;
-}
 h3 {
-  font-weight: 700;
-  text-overflow: ellipsis;
-  overflow: clip;
-  overflow-clip-margin: 1px;
-  white-space: wrap;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+  font-family: "Lato", sans-serif;
 }
-h4 {
-  font-weight: 300;
-  color: #9c9c9c;
+button {
+  color: #090909;
+  width: 40px;
+  height: 40px;
+  font-size: 1em;
+  border-radius: 500px;
+  background: var(--background);
+  border: 1px solid var(--background);
+  transition: all 0.3s;
+  box-shadow: var(--shadowout);
 }
 
-main {
-  padding: 0 2rem;
+button:active {
+  color: var(--primary);
+  box-shadow: var(--shadowin);
 }
-a.active > svg {
-  color: black;
+:root {
+  --background: #f5f5fa;
+  --primary: #5533ea;
+  --accent1: #ffc734;
+  --accent2: #ff8893;
+  --button: #57419d;
+  --tags: #7878ab;
+  --semantic: #261465;
+  --title: #333333;
+  --bread: #828282;
+  --shadowout: 6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
+  --shadowin: inset 4px 4px 12px #bebebe, inset -4px -4px 12px #ffffff;
 }
-.dark a.active > svg {
-  color: white;
+
+/* ------------------------------------------------------------ */
+
+.frontcat {
+  width: 100%;
 }
-.header {
-  position: fixed;
-  width: calc(100vw - 4rem);
-  padding: 0 2rem;
-  background-color: #fff;
-  height: 60px;
-  grid-template-columns: 1fr 1fr 1fr;
+
+.fronttitle {
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--title);
+  margin-top: 40px;
 }
-.flexContainer {
+
+.frontbread {
+  font-weight: 500;
+  font-size: 16px;
+  font-style: normal;
+  color: var(--bread);
+  margin-bottom: 40px;
+}
+.frontdot {
+  width: 40px;
+  margin: auto;
+  display: block;
+}
+.frontbutton {
+  position: relative;
+  top: 50px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--button);
+  color: #fff;
+  font-size: 1em;
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5),
+    5px 5px 10px rgba(170, 170, 204, 0.25),
+    10px 10px 20px rgba(170, 170, 204, 0.5), -10px -10px 20px #ffffff;
+  border-radius: 320px;
+}
+.frontbutton:active {
+  color: #fff;
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5),
+    5px 5px 10px rgba(170, 170, 204, 0.25),
+    10px 10px 20px rgba(170, 170, 204, 0.5), -10px -10px 20px #ffffff;
+}
+.carousel {
   display: flex;
-}
-.gridContainer {
-  display: grid;
-}
-.justify-space-between {
-  justify-content: space-between;
-}
-.wrap {
-  flex-wrap: wrap;
-}
-.HorizontalMovieListContainer {
-  padding: 76px 0 0;
-}
-.VerticalMovieListContainer {
-  padding: 0 0 76px;
-}
-.VerticalMovieListTitleLayout {
-  position: sticky;
-  top: 60px;
-  background-color: #fff;
-  padding-bottom: 2rem;
-}
-.movieCardContainerLayout {
-  margin: 2rem -2rem;
-  gap: 1rem;
-  padding: 0 1rem 0 2rem;
+  gap: 20px;
+  position: absolute;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  width: 100%;
+  left: 0;
   overflow-x: scroll;
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
-  scrollbar-width: none; /* Firefox */
 }
-.movieCardContainerLayout::-webkit-scrollbar {
+.carousel::-webkit-scrollbar {
   display: none;
-}
-.movieListContainerLayout {
-  flex-direction: column;
-  gap: 16px;
 }

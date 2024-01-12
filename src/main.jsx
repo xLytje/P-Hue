@@ -9,11 +9,13 @@ import {
 import App from "./App";
 import IndexView from "./pages/index";
 import ErrorView from "./pages/error";
+import BedView from "./pages/bedroom";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />} errorElement={<ErrorView />}>
       <Route index element={<IndexView />} />
+      <Route path="/bedroom" element={<BedView />} />
     </Route>
   )
 );

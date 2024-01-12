@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 import Room from "../components/Room";
+import Footer from "../components/Footer";
 
 const User = styled.figure`
   height: 50px;
@@ -18,7 +19,7 @@ const Head = styled.div`
 `;
 const Menu = styled.section`
   background: #f6f8fb;
-  padding: 2rem;
+  padding: 2rem 2rem 3rem 2rem;
   border-radius: 30px 30px 0 0;
   display: flex;
   flex-wrap: wrap;
@@ -40,35 +41,36 @@ const IndexView = () => {
         <h3>All Rooms</h3>
         <Room
           image={"../src/assets/bed.png"}
-          title={"Bed"}
+          title={"Bed room"}
           bread={"4 Lights"}
         />
         <Room
           image={"../src/assets/room.png"}
-          title={"Bed"}
-          bread={"4 Lights"}
+          title={"Living room"}
+          bread={"2 Lights"}
         />
         <Room
           image={"../src/assets/kitchen.png"}
-          title={"Bed"}
-          bread={"4 Lights"}
+          title={"Kitchen"}
+          bread={"5 Lights"}
         />
         <Room
           image={"../src/assets/bathtube.png"}
-          title={"Bed"}
-          bread={"4 Lights"}
+          title={"Bathroom"}
+          bread={"1 Light"}
         />
         <Room
           image={"../src/assets/house.png"}
-          title={"Bed"}
-          bread={"4 Lights"}
+          title={"Outdoor"}
+          bread={"5 Lights"}
         />
         <Room
           image={"../src/assets/balcony.png"}
-          title={"Bed"}
-          bread={"4 Lights"}
+          title={"Balcony"}
+          bread={"2 Lights"}
         />
       </Menu>
+      <Footer />
     </>
   );
 };

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const StyledFooter = styled.footer`
   height: 67px;
@@ -15,7 +16,9 @@ const Footer = () => {
   return (
     <StyledFooter>
       <img src="../src/assets/bulb.png" alt="Lys" />
-      <img src="../src/assets/home.png" alt="Forside" />
+      <Link to="/">
+        <img src="../src/assets/home.png" alt="Forside" />
+      </Link>
       <img src="../src/assets/settings.png" alt="Indstillinger" />
     </StyledFooter>
   );

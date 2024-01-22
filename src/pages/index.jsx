@@ -43,31 +43,37 @@ const IndexView = () => {
           image={"../src/assets/bed.png"}
           title={"Bed room"}
           bread={"4 Lights"}
+          link={"/bedroom"}
         />
         <Room
           image={"../src/assets/room.png"}
           title={"Living room"}
           bread={"2 Lights"}
+          link={"/bedroom"}
         />
         <Room
           image={"../src/assets/kitchen.png"}
           title={"Kitchen"}
           bread={"5 Lights"}
+          link={"/bedroom"}
         />
         <Room
           image={"../src/assets/bathtube.png"}
           title={"Bathroom"}
           bread={"1 Light"}
+          link={"/bedroom"}
         />
         <Room
           image={"../src/assets/house.png"}
           title={"Outdoor"}
           bread={"5 Lights"}
+          link={"/bedroom"}
         />
         <Room
           image={"../src/assets/balcony.png"}
           title={"Balcony"}
           bread={"2 Lights"}
+          link={"/bedroom"}
         />
       </Menu>
       <Footer />

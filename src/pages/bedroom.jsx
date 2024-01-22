@@ -1,21 +1,17 @@
-import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 import Room from "../components/Room";
 import Footer from "../components/Footer";
 
-const User = styled.figure`
-  height: 50px;
-  width: 50px;
-  border-radius: 500px;
-  border: 1px solid #fff;
-  margin: 0;
+const StyledImg = styled.img`
+  position: absolute;
+  top: 0;
+  right: 2rem;
 `;
 const Head = styled.div`
   padding: 2rem;
   margin: 30px 0 20px 0;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
 `;
 const Menu = styled.section`
   background: #f6f8fb;
@@ -27,6 +23,11 @@ const Menu = styled.section`
   justify-content: space-between;
   height: auto;
 `;
+const Lys = styled.p`
+  color: #ffd239;
+  font-size: 19px;
+  font-weight: 700;
+`;
 
 const BedView = () => {
   return (
@@ -35,9 +36,12 @@ const BedView = () => {
         <h1>
           Bed<br></br>Room
         </h1>
-        <User />
+        <StyledImg src="../src/assets/lamp.png" alt="Lampe" />
+        <Lys>4 Lights</Lys>
       </Head>
       <Menu>
+        <figure className="w-5 h-5 bg-black" />
+        <p class="font-extrabold text-slate-500 text-3xl">test test test</p>
         <h3>All Rooms</h3>
         <Room
           image={"../src/assets/bed.png"}

@@ -576,6 +576,10 @@ video {
   right: 2rem;
 }
 
+.top-\[195px\] {
+  top: 195px;
+}
+
 .flex {
   display: flex;
 }

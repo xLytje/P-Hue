@@ -21,8 +21,8 @@ const Menu = styled.section`
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
-  justify-content: space-between;
-  height: auto;
+  align-content: flex-start;
+  min-height: 70vh;
 `;
 const Lys = styled.p`
   color: #ffd239;

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 
 function LightOnOff() {
-  const [isOn, setIsOn] = useState(true);
+  const [isOn, setIsOn] = useState(false);
 
   const options = {
     method: "PUT",
@@ -24,7 +24,7 @@ function LightOnOff() {
   return (
     <button
       onClick={toggleLight}
-      className="absolute top-[215px] right-8 bg-white shadow-none"
+      className="absolute top-[195px] right-8 bg-white shadow-none"
     >
       {isOn ? "🌑" : "🌞"}
     </button>

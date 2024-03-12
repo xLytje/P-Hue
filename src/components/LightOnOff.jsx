@@ -21,7 +21,14 @@ function LightOnOff() {
     }
   };
 
-  return <button onClick={toggleLight}>💡</button>;
+  return (
+    <button
+      onClick={toggleLight}
+      className="absolute top-[215px] right-8 bg-white shadow-none"
+    >
+      💡
+    </button>
+  );
 }
 
 export default LightOnOff;

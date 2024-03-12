@@ -26,7 +26,7 @@ function LightOnOff() {
       onClick={toggleLight}
       className="absolute top-[215px] right-8 bg-white shadow-none"
     >
-      💡
+      {isOn ? "🌑" : "🌞"}
     </button>
   );
 }

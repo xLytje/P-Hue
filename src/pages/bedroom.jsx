@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 import Footer from "../components/Footer";
 import LightOnOff from "../components/LightOnOff";
+import LightSlider from "../components/LightSlider";
 
 const StyledImg = styled.img`
   position: absolute;
@@ -44,6 +45,11 @@ const BedView = () => {
         <p class="font-extrabold text-slate-500 text-3xl">test test test</p> */}
         <LightOnOff />
         <h3>Intensity</h3>
+        <div className="flex justify-between w-full items-center">
+          <p className="text-2xl">🔅</p>
+          <LightSlider />
+          <p className="text-2xl">🔆</p>
+        </div>
       </Menu>
       <Footer />
     </>

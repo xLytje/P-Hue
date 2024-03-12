@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
-import Room from "../components/Room";
 import Footer from "../components/Footer";
+import LightOnOff from "../components/LightOnOff";
 
 const StyledImg = styled.img`
   position: absolute;
@@ -40,14 +40,10 @@ const BedView = () => {
         <Lys>4 Lights</Lys>
       </Head>
       <Menu>
-        <figure className="w-5 h-5 bg-black" />
-        <p class="font-extrabold text-slate-500 text-3xl">test test test</p>
-        <h3>All Rooms</h3>
-        <Room
-          image={"../src/assets/bed.png"}
-          title={"Bed room"}
-          bread={"4 Lights"}
-        />
+        {/* <figure className="w-5 h-5 bg-black" />
+        <p class="font-extrabold text-slate-500 text-3xl">test test test</p> */}
+        <LightOnOff />
+        <h3>Intensity</h3>
       </Menu>
       <Footer />
     </>
@@ -55,3 +51,16 @@ const BedView = () => {
 };
 
 export default BedView;
+
+// const hueApi = await axios.get(
+//   "http://192.168.8.100/api/dhe6ind3MTGqt6TKDOJh6bkbTQRcuhF1NwbrPgY4/lights/32"
+// );
+
+// console.log(hueApi.data.state.on);
+
+// const options = {
+//   method: "PUT",
+//   url: "http://192.168.8.100/api/dhe6ind3MTGqt6TKDOJh6bkbTQRcuhF1NwbrPgY4/lights/32/state",
+//   headers: { "Content-Type": "application/json" },
+//   data: { on: true },
+// };

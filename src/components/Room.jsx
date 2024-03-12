@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const Box = styled(Link)`
   filter: drop-shadow(0px 3px 11px rgba(10, 77, 162, 0.06));
-  width: 110px;
-  height: 110px;
+  width: 150px;
+  height: 150px;
   background-color: white;
   border-radius: 20px;
   padding: 20px;

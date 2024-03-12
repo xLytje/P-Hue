@@ -33,8 +33,6 @@ button {
   height: 40px;
   font-size: 1em;
   border-radius: 500px;
-  background: var(--background);
-  border: 1px solid var(--background);
   transition: all 0.3s;
   box-shadow: var(--shadowout);
 }
